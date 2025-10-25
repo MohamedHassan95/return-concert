@@ -1,0 +1,321 @@
+.welcome,
+p {
+  letter-spacing: 1px;
+}
+.home,
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+.footer a,
+.footer-nav a,
+.social-icons a {
+  text-decoration: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+:root {
+  --main-color: #5c5c5c;
+  --accent-color: #ff5700;
+  --text-color: #ffffff;
+  --bg1-color: #202020;
+  --bg2-color: #2e2e2e;
+}
+body {
+  background-color: var(--bg1-color);
+  color: var(--text-color);
+}
+p {
+  font-size: 0.8rem;
+  color: #c4c4c4;
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 60px;
+}
+@media (max-width: 991px) {
+  .navbar-nav {
+    margin: auto;
+    text-align: center;
+  }
+}
+.about-btn,
+.social-icons {
+  margin-top: 25px;
+}
+.home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  color: var(--main-color);
+  z-index: 1;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url("images/home/rafeek_optimized.webp") center/cover no-repeat; */
+  z-index: -1;
+  animation: 5s ease-out forwards zoom-bg;
+}
+.custom-btn:hover,
+.social-icons a:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+@keyframes zoom-bg {
+  from {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.home-content h3 {
+  opacity: 0;
+  animation: 0.8s 0.5s forwards slideInRight;
+  margin-bottom: 10px;
+}
+.home-content h1 {
+  opacity: 0;
+  animation: 0.8s 1s forwards slideInRight;
+  margin-bottom: 15px;
+}
+.home-content p {
+  opacity: 0;
+  animation: 0.8s 1.5s forwards slideInRight;
+  margin-bottom: 20px;
+}
+.home-content a {
+  opacity: 0;
+  animation: 0.8s 2s forwards slideInRight;
+}
+.welcome {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #fff;
+}
+.concert-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: left;
+}
+.home p {
+  width: 40%;
+}
+.home .btn {
+  margin-top: 20px;
+}
+.custom-btn {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background-color: transparent;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.custom-btn:hover {
+  border-color: var(--accent-color);
+}
+.about {
+  background-color: var(--bg2-color);
+  color: var(--text-color);
+}
+.about-title,
+.section-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+.about-text,
+.section-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.about-text {
+  color: #cfcfcf;
+  margin-bottom: 15px;
+}
+.social-icons {
+  margin-bottom: 15px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #2e2e2e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+.musicians {
+  background-color: var(--bg1-color);
+}
+.footer,
+.location,
+.musician-card {
+  background-color: var(--bg2-color);
+}
+.section-subtitle {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.musician-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.musician-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+.musician-card img {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+}
+.musician-name {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+.musician-role {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.location {
+  color: var(--text-color);
+  padding: 60px 0;
+  text-align: center;
+}
+.concert-details {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.map-container {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.map-container iframe {
+  filter: grayscale(100%) contrast(120%);
+  opacity: 0.9;
+}
+.footer-nav a:hover,
+.form-custom {
+  color: var(--accent-color);
+}
+.footer {
+  color: #ccc;
+  border-top: 1px solid #444;
+}
+.footer a,
+.footer-title {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+.footer-nav a {
+  color: #ccc;
+  padding: 0 10px;
+  transition: color 0.3s;
+  font-size: 0.9rem;
+}
+.footer-copy {
+  font-size: 0.8rem;
+  color: #888;
+}
+@media (max-width: 1024px) {
+  .home p {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .concert-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  .welcome {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .home p {
+    width: 80%;
+  }
+}
+@media (max-width: 576px) {
+  section {
+    scroll-margin-top: 240px;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .about .custom-btn {
+    display: block;
+    margin: 35px auto 0;
+    width: fit-content;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .concert-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  .welcome {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .home p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

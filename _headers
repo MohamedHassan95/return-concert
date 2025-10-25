@@ -1,0 +1,4 @@
+/* 
+  Cache for 1 month
+*/
+Cache-Control: public, max-age=2592000
